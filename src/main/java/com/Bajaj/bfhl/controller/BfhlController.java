@@ -16,4 +16,8 @@ public class BfhlController {
     public ResponseEntity<BfhlResponse> handle(@RequestBody BfhlRequest request) {
         return ResponseEntity.ok(service.process(request));
     }
+    @GetMapping("/health")
+    public ResponseEntity<String> health() {
+        return ResponseEntity.ok("OK");
+    }
 }
